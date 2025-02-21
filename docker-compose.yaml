@@ -5,8 +5,6 @@ services:
     image: meu-site:latest  # Usa a imagem local já construída
     container_name: meu-site
     restart: always
-    ports:
-      - "80:80"  # Expõe a porta do Nginx
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.meusite.rule=Host(`gempreendimentos.com`)"
