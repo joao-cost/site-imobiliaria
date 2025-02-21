@@ -7,6 +7,6 @@ services:
     restart: always
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.meusite.rule=Host(`gempreendimentos.com.com`)"
+      - "traefik.http.routers.meusite.rule=Host(`gempreendimentos.com`)"
       - "traefik.http.routers.meusite.entrypoints=websecure"
       - "traefik.http.routers.meusite.tls.certresolver=le"
