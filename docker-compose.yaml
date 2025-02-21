@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  site:
+    image: nginx:alpine  # Usa o Nginx como servidor
+    restart: always
+    volumes:
+      - .:/usr/share/nginx/html  # Monta os arquivos do site
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.meusite.rule=Host(`gempreendimentos.com`)"
+      - "traefik.http.routers.meusite.entrypoints=websecure"
+      - "traefik.http.routers.meusite.tls.certresolver=le"

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Teste</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+    <header id="topbar">  <!-- Seção Topbar (Cabeçalho) -->
+        <nav class="menu-principal">           <!-- Menu de Navegação Principal -->
+            <ul class="menu-lista">        <!-- Lista do Menu -->
+                <li class="menu-item"><a href="index.html" class="menu-link">Home</a></li>      <!-- Item do menu: Home -->
+                <li class="menu-item"><a href="sobrenos.html" class="menu-link">Sobre Nós</a></li> <!-- Item do menu: Sobre Nós -->
+                <li class="menu-item"><a href="contato.html" class="menu-link">Contato</a></li>   <!-- Item do menu: Contato -->
+            </ul>
+        </nav>
+    </header>
+    <main id="conteudo-principal">           <!-- Seção de Conteúdo Principal da Página -->
+        <section id="headline" class="secao-pagina-inicial"> <!-- Seção Headline (Destaque Inicial) -->
+            <h1>Encontre o Apartamento Ideal em Sinop</h1>
+            <p class="subtitulo-headline">As melhores opções de imóveis para você morar.</p>
+        </section>
+
+        <section id="mapa-fixo" class="secao-pagina-inicial"> <!-- Seção Mapa Fixo -->
+            <h2>Localização dos Condomínios</h2>
+            <div id="mapa" class="mapa"></div> <!-- Div para o Mapa (Leaflet) -->
+        </section>
+
+    </main>
+    <footer id="rodape">          <!-- Seção Rodapé -->
+        <p class="texto-rodape">© [Ano] [Nome da Imobiliária]. Todos os direitos reservados.</p>
+    </footer>
+    <script src='js/main2.js'></script>
+</body>
+</html>
