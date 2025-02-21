@@ -2,9 +2,11 @@ version: "3.8"
 
 services:
   site:
-    build: .  # Constrói a imagem com o Dockerfile
-    container_name: meu-site  # Nome fixo para facilitar
+    image: meu-site:latest  # Usa a imagem local já construída
+    container_name: meu-site
     restart: always
+    ports:
+      - "80:80"  # Expõe a porta do Nginx
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.meusite.rule=Host(`gempreendimentos.com`)"
