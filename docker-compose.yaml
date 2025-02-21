@@ -2,12 +2,11 @@ version: "3.8"
 
 services:
   site:
-    image: nginx:alpine  # Usa o Nginx como servidor
+    build: .  # Constrói a imagem com o Dockerfile
+    container_name: meu-site  # Nome fixo para facilitar
     restart: always
-    volumes:
-      - .:/usr/share/nginx/html  # Monta os arquivos do site
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.meusite.rule=Host(`gempreendimentos.com`)"
+      - "traefik.http.routers.meusite.rule=Host(`seu-dominio.com`)"
       - "traefik.http.routers.meusite.entrypoints=websecure"
       - "traefik.http.routers.meusite.tls.certresolver=le"
